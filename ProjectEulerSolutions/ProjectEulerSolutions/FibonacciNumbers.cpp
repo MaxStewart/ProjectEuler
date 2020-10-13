@@ -9,26 +9,28 @@
 
 int FindFibonacciSequence(int max)
 {
-	int sum = 0;
-	int currentFib = 0;
-	int prevNum = 0;
-	int currentNum = 1;
+	int t1 = 0, t2 = 1, nextTerm = 0;
 
-	while (true) 
+	std::cout << "Fibonacci Series: ";
+
+	for (int i = 1; i <= max; ++i)
 	{
-		currentFib = prevNum + currentNum;
-		prevNum = currentNum;
-		currentNum = currentFib;
-
-		if (currentFib > max) {
-			break;
-		}
-
-		if (currentFib % 2 == 0)
+		// Prints the first two terms.
+		if (i == 1)
 		{
-			sum += currentFib;
+			std::cout << " " << t1;
+			continue;
 		}
-	}
+		if (i == 2)
+		{
+			std::cout << t2 << " ";
+			continue;
+		}
+		nextTerm = t1 + t2;
+		t1 = t2;
+		t2 = nextTerm;
 
-	return sum;
+		std::cout << nextTerm << " ";
+	}
+	return 0;
 }

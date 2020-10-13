@@ -2,27 +2,28 @@
 //
 
 #include <iostream>
+#include <stdio.h>
+
 #include "MultipleOf3And5.h"
 #include "FibonacciNumbers.h"
+#include "LargestPalindrome.h"
 
 int main()
 {
-    // Problem 1 
+    // Problem 1
     int multiplesSum = SumMultiplesOf3And5(3, 5, 1000);
     std::cout << "Sums: " << multiplesSum << std::endl;
 
     // Problem 2
-    int fibSum = FindFibonacciSequence(4000000); // Max of 4 million
-    std::cout << "Sum of fib sequence: " << fibSum << std::endl;
+    FindFibonacciSequence(4000000); // Max of 4 million
 
     // Problem 3
-
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
+// Tips for Getting Started:
 //   1. Use the Solution Explorer window to add/manage files
 //   2. Use the Team Explorer window to connect to source control
 //   3. Use the Output window to see build output and other messages
